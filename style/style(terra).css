@@ -1,0 +1,173 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;700&display=swap');
+
+:root {
+  --cor0: #f0f7ff;
+  --cor1: #7cc2fe;
+  --cor2: #d7ccc8; 
+  --cor3: #a1887f; 
+  --cor4: #5d4037;
+  --cor5: #0f172a; 
+  
+  --cor-detalhe: #d87d4a;
+  
+  --fonte-padrao: 'Outfit', Arial, Verdana, Helvetica, sans-serif;
+  --fonte-destaque: "Bebas Neue", sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: var(--cor0);
+  font-family: var(--fonte-padrao);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ícone de link externo */
+.externo::after {
+  content: '\00A0\1F310';
+}
+
+header {
+  /* Gradiente suavizado entre o azul profundo e o tom café */
+  background-image: linear-gradient(to bottom, var(--cor5), var(--cor4));
+  min-height: 150px;
+  text-align: center;
+  padding: 40px 10px 20px 10px;
+}
+
+header > h1 {
+  color: white;
+  font-family: var(--fonte-destaque);
+  margin-bottom: 20px;
+  font-size: 3.5em;
+  font-weight: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header > p {
+  font-size: 1.2em;
+  color: var(--cor0); /* Azul clarinho para melhor leitura sobre o fundo escuro */
+  max-width: 650px;
+  margin: auto;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+nav {
+  background-color: var(--cor4);
+  padding: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+nav > a {
+  color: white; /* Branco para contraste máximo */
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav > a:hover {
+  background-color: var(--cor1); /* Destaque azul claro no hover */
+  color: var(--cor5);
+}
+
+main {
+  background-color: white;
+  min-width: 300px;
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 25px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+main h1 {
+  color: var(--cor5); /* Azul escuro para o título principal */
+  font-family: var(--fonte-destaque);
+  font-size: 2.2em;
+  margin-bottom: 15px;
+}
+
+main h2 {
+  color: var(--cor4); /* Marrom escuro para subtítulos */
+  font-family: var(--fonte-destaque);
+  font-size: 1.6em;
+  background-image: linear-gradient(to right, var(--cor2), transparent); /* Fundo sutil em bege */
+  text-indent: 10px;
+  margin-top: 30px;
+  padding: 5px 0;
+}
+
+main p {
+  margin: 15px 0px;
+  text-align: justify;
+  text-indent: 25px;
+  font-size: 1.05em;
+  line-height: 1.8em;
+  color: #333;
+}
+
+main strong {
+  color: var(--cor4);
+  background-color: var(--cor0); /* Destaque suave em azul claro */
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+main a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--cor5);
+  background-color: var(--cor1);
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+main a:hover {
+  background-color: var(--cor4);
+  color: white;
+}
+
+/* Estilo para o campo Fale Conosco */
+#faleconosco {
+  background-color: var(--cor0);
+  padding: 15px;
+  border-left: 5px solid var(--cor-detalhe);
+  border-radius: 5px;
+  text-indent: 0;
+  font-weight: bold;
+  color: var(--cor5);
+}
+
+footer {
+  background-color: var(--cor5);
+  color: white;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 20px;
+  border-top: 4px solid var(--cor-detalhe); /* Detalhe laranja para "fechar" o design */
+}
+
+footer a {
+  color: var(--cor1);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}

@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+/* Importação de fontes modernas do Google */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;700&display=swap');
+
+:root {
+  /* Paleta de Cores: Azul Oceano/Espacial com detalhes em Verde Android e Marrom Ferro */
+  --cor0: #e3f2fd; /* Azul claríssimo (Fundo) */
+  --cor1: #bbdefb; /* Azul céu suave */
+  --cor2: #2196f3; /* Azul vibrante */
+  --cor3: #1976d2; /* Azul royal */
+  --cor4: #0d47a1; /* Azul marinho profundo */
+  --cor5: #0a192f; /* Azul quase preto (Cabeçalho/Rodapé) */
+  --cor-android: #3ddc84; /* Verde Android original */
+  --cor-ferro: #d87d4a; /* Tom terroso para destaques da Terra */
+  
+  --fonte-padrao: 'Outfit', Arial, Verdana, Helvetica, sans-serif;
+  --fonte-destaque: "Bebas Neue", sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cor0);
+  font-family: var(--fonte-padrao);
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+header {
+  background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+  min-height: 180px;
+  text-align: center;
+  padding: 50px 20px 30px 20px;
+  color: white;
+}
+
+header h1 {
+  font-family: var(--fonte-destaque);
+  font-size: 3.5em;
+  font-weight: normal;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: auto;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Menu de Navegação */
+nav {
+  background-color: var(--cor5);
+  padding: 12px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: var(--cor1);
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--cor2);
+  color: white;
+}
+
+/* Container Principal */
+main {
+  background-color: white;
+  min-width: 300px;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  border-radius: 15px;
+}
+
+/* Tipografia Interna */
+main h1 {
+  color: var(--cor4);
+  font-family: var(--fonte-destaque);
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--cor1);
+}
+
+main h2 {
+  color: var(--cor3);
+  font-family: var(--fonte-destaque);
+  font-size: 1.8em;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  background-image: linear-gradient(to right, var(--cor1), transparent);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+main p {
+  margin: 15px 0px;
+  text-align: justify;
+  text-indent: 25px;
+  font-size: 1.1em;
+  line-height: 1.8em;
+}
+
+/* Links Externos e Especiais */
+.externo {
+  color: var(--cor4);
+  font-weight: bold;
+  text-decoration: none;
+  background-color: var(--cor1);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.externo:hover {
+  background-color: var(--cor3);
+  color: white;
+}
+
+.externo::after {
+  content: '\00A0\1F517'; /* Ícone de link */
+  font-size: 0.8em;
+}
+
+/* Imagens */
+picture img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+img.pequena {
+  max-width: 300px;
+  display: block;
+  margin: 20px auto;
+}
+
+/* Vídeos Responsivos */
+div.videos {
+  background-color: var(--cor5);
+  margin: 20px -30px;
+  padding: 20px;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  position: relative;
+}
+
+div.videos iframe {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+
+/* Bloco Aside (Destaques e Curiosidades) */
+aside {
+  background-color: #f1f8ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  margin: 30px 0;
+}
+
+aside h3 {
+  background-color: var(--cor3);
+  color: white;
+  padding: 10px;
+  margin: -20px -20px 20px -20px;
+  border-radius: 10px 10px 0 0;
+  font-family: var(--fonte-destaque);
+}
+
+aside ul {
+  list-style-type: '✔ ';
+  list-style-position: inside;
+  padding-left: 10px;
+}
+
+aside li {
+  margin-bottom: 8px;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cor5);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+footer a {
+  color: var(--cor-android);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Sessão Fale Conosco */
+#faleconosco {
+  border-top: 2px dashed var(--cor-ferro);
+  padding-top: 20px;
+  margin-top: 40px;
+  font-weight: bold;
+}
